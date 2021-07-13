@@ -1,1 +1,1 @@
-web: gunicorn app-persegi:aplikasi
+web: gunicorn app-kalkulator:app
