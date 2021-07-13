@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalkulator Persegi Panjang</title>
+    <style media="screen">
+
+    body{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      background-image: linear-gradient(120deg,#b33939,#ffb142);
+      background-size: cover;
+      min-height: 100vh;
+
+    }
+
+    a{
+      text-decoration: none;
+    }
+    .container{
+      width: 500px;
+      position: absolute;
+      height: 300px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 150px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 20px ;
+    }
+    .container h1{
+      font-size: 30px;
+      font-weight: 500;
+      border-radius: 20px;
+      color: white;
+      margin-top: -90px;
+    }
+    .image{
+        cursor: pointer;
+        float: right;
+        margin-top: 30px;
+        margin-right: -30px;
+        position: relative;
+        user-select: none;
+    }
+    .image img{
+        display: block;
+        height: 64px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width:60px;
+    }
+    .text{
+      text-align: left;
+      margin-left: 97px;
+      margin-bottom: -100px;
+      color: black;
+      position: absolute;
+      margin-top: 5px;
+    }
+
+    .text4{
+      color: black;
+      position: absolute;
+      margin-top: 170px;
+      text-align: left;
+      margin-left: 97px;
+    }
+
+    .text, .text4{
+        font-size: large;
+        font-weight: 200;
+    }
+
+    #matematika{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+      margin-top: 66px;
+    }
+
+    #matematika:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
+
+    #matematika2{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+      margin-top: 60px;
+      margin-left: -32px;
+    }
+
+    #matematika2:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
+
+    #btn{
+      font-family: inherit;
+      margin-top: 20px;
+      margin-left: 4px;
+      border: none;
+      color: #fff;
+      background-image: linear-gradient(120deg,#2e86de,#48dbfb);
+      width: 180px;
+      padding: 15px;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #btn:hover{
+      box-shadow: 1px 1px 10px #00d2d3;
+    }
+
+    .result{
+      background-image: linear-gradient(120deg,#576574,#c8d6e5);
+      padding: 1rem;
+      width: 130px;
+      height: 20px;
+      margin-top: 40px;
+      margin-left: 170px;
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #576574;
+    }
+
+    .text2{
+      color: black;
+      position: absolute;
+      margin-top: -40px;
+      text-align: left;
+      margin-left: 35px;
+    }
+  .animasi{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.animasi span{
+	height: 60px;
+	width: 60px;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	animation: move 10s linear infinite;
+	position: relative;
+	overflow: hidden;
+}
+.dropdown{
+  margin-top: 20px;
+  margin-left: -24px;
+  text-align: center;
+}
+.text7{
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+@keyframes move {
+	100%{
+		transform: translateY(-90vh);
+	}
+}
+.animasi span.one{
+	animation-delay: 2.2s;
+	transform: scale(1.5)
+}
+.animasi span.two{
+	animation-delay: 4.0s;
+	transform: scale(0.7)
+}
+.animasi span.three{
+	animation-delay: 1.5s;
+	transform: scale(2)
+}
+.animasi span.four{
+	animation-delay: 5.4s;
+	transform: scale(3)
+}
+.animasi span.five{
+	animation-delay: 6.8s;
+	transform: scale(1)
+}
+.animasi span.six{
+	animation-delay: 3s;
+	transform: scale(0.3)
+}
+.animasi span.seven{
+	animation-delay: 7.5s;
+	transform: scale(2)
+}
+.animasi span:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 60px;
+	width: 40%;
+	transform: skew(45deg) translateX(150px);
+	background: rgba(255, 255, 255, 0.15);
+	animation: mirror 3s linear infinite;
+}
+@keyframes mirror {
+	100%{
+		transform: translateX(-450px);
+	}
+}
+.animasi span.one:before{
+	animation-delay: 1,6s;
+}
+.animasi span.two:before{
+	animation-delay: 4s;
+}
+.animasi span.three:before{
+	animation-delay: 3s;
+}
+.animasi span.four:before{
+	animation-delay: 6s;
+}
+.animasi span.five:before{
+	animation-delay: 2s;
+}
+.animasi span.six:before{
+	animation-delay: 0.5s;
+}
+.animasi span.seven:before{
+	animation-delay: 5s;
+}
+</style>
+</head>
+  <body>
+    <div class="animasi">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
+      <span class="seven"></span>
+      </div>
+    <div class="container">
+      <a href="#" class="image">
+        <img src="https://raw.githubusercontent.com/CSPGhostDelta/halamanutama/main/template/home.png" alt="">
+      </a>
+      <h1>Kalkulator Aritmatika</h1>
+      <form action="/send" method="POST">
+        <div class="text">
+          <p>Masukkan Bilangan 1 : </p>
+        </div>
+        <div class="text4">
+          <p>Masukkan Bilangan 2 : </p>
+        </div>
+        <input
+          type="text"
+          placeholder="Masukkan Bilangan 1"
+          class="u-full-width"
+          id="matematika"
+          name="matematika"
+        />
+        <div class="dropdown">
+          <div class="text7">
+            <label for="operasi">Pilih Operasi : </label>
+          </div>
+            <select class="u-full-width" name="operasi">
+             <option value="penjumlahan">Penjumlahan (+)</option>
+             <option value="pengurangan">Pengurangan (-)</option>
+             <option value="perkalian">Perkalian (x)</option>
+             <option value="pembagian">Pembagian (/)</option>
+            </select>
+        </div>
+        <input
+        type="text"
+        placeholder="Masukkan Bilangan 2"
+        class="u-full-width"
+        id="matematika2"
+        name="matematika2"
+        />
+      <div class="result">
+        <p class="text2">Hasil : </p>
+          {{ sum }}
+      </div>
+      <input type="submit" value="Hitung" id="btn">
+        <br />
+      </form>
+    </div>
+  </body>
+</html>
